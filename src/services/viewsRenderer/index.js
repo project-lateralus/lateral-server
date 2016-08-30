@@ -7,5 +7,7 @@ module.exports = function() {
   app.set('view engine', 'jade');
   app.set('views', __dirname + '/views');
 
-  app.get('/auth/facebook_success', (req, res) => res.render('facebookSuccess'));
+  app.get('/auth/facebook_success', (req, res) => {
+    res.render('facebookSuccess')
+  });
 };

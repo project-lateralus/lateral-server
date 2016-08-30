@@ -1,6 +1,23 @@
 doctype html
 html(lang="en")
   head
-    title= 'facebook success'
+    title='facebook success'
   body
-    h1 Welcome to Lateral
+    script(src='//code.jquery.com/jquery-1.12.0.min.js')
+    script(type='text/javascript', src='//cdnjs.cloudflare.com/ajax/libs/core-js/2.1.4/core.min.js')
+    script(type='text/javascript', src='//npmcdn.com/feathers-client@^1.0.0/dist/feathers.js')
+    script(type='text/javascript').
+      var host = 'http://localhost:3030';
+      var app = feathers()
+      .configure(feathers.rest(host).jquery(jQuery))
+      .configure(feathers.hooks())
+      .configure(feathers.authentication({ storage: window.localStorage }));
+
+      app.authenticate().then(function(result){
+        // TODO conditionaly check
+        // if cordova, redirect to specific cordova callback url
+        window.location.href = 'http://localhost:8100/#/auth/facebook_success?token=' + app.get('token');
+      }).catch(function(error){
+        // TODO redirecto to custom page
+        window.location.href = host + '/auth/failure';
+      });
