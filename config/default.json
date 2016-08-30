@@ -1,0 +1,19 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "mongodb": "mongodb://localhost:27017/lateralServer",
+  "public": "../public/",
+  "auth": {
+    "token": {
+      "secret": "EGIEUNP4nWvUEHdCytBQgIwQDQq4+TB/18P1fhZKtSkxBH+aHqXLhF4EH4EzLITgE4kJAdWyc6ywUITVmQLgbw=="
+    },
+    "local": false,
+    "facebook": {
+      "clientID": "your facebook client id",
+      "clientSecret": "your facebook client secret",
+      "permissions": {
+        "scope": ["public_profile","email"]
+      }
+    }
+  }
+}
