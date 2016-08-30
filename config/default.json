@@ -9,11 +9,14 @@
     },
     "local": false,
     "facebook": {
-      "clientID": "your facebook client id",
-      "clientSecret": "your facebook client secret",
+      "clientID": "174617572947418",
+      "clientSecret": "e3ebe0d84f869492f3035b7de1aef04c",
       "permissions": {
-        "scope": ["public_profile","email"]
-      }
+        "scope": ["public_profile", "email"]
+      },
+      "endPoint": "/auth/facebook",
+      "callbackSuffix": "callback",
+      "successRedirect": "/auth/facebook_success"
     }
   }
 }
