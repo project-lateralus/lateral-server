@@ -18,7 +18,8 @@
   "scripts": {
     "test": "npm run jshint && npm run mocha",
     "jshint": "jshint src/. test/. --config",
-    "start": "node src/",
+    "start": "DEBUG=* nodemon src/",
+    "production": "node src/",
     "mocha": "mocha test/ --recursive"
   },
   "dependencies": {
@@ -33,6 +34,7 @@
     "feathers-mongoose": "^3.5.2",
     "feathers-rest": "^1.4.4",
     "feathers-socketio": "^1.4.1",
+    "jade": "^1.11.0",
     "mongoose": "^4.5.10",
     "passport": "^0.3.2",
     "passport-facebook": "^2.1.1",
@@ -43,6 +45,7 @@
   "devDependencies": {
     "jshint": "^2.9.3",
     "mocha": "^3.0.2",
+    "nodemon": "^1.10.2",
     "request": "^2.74.0"
   }
 }
