@@ -12,7 +12,8 @@ module.exports = function() {
     paginate: {
       default: 5,
       max: 25
-    }
+    },
+    lean: true // https://github.com/feathersjs/feathers-authentication/issues/244#issuecomment-233974489
   };
 
   // Initialize our service with any options it requires
