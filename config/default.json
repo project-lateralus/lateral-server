@@ -10,8 +10,8 @@
     },
     "local": false,
     "facebook": {
-      "clientID": "174617572947418",
-      "clientSecret": "e3ebe0d84f869492f3035b7de1aef04c",
+      "clientID": "FACEBOOK_CLIENT_ID",
+      "clientSecret": "FACEBOOK_CLIENT_SECRET",
       "permissions": {
         "scope": ["public_profile", "email"]
       },
